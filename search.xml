@@ -7,6 +7,9 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">select</span><br><span class="line">       to_char(sysdate,&#39;W&#39;), --当天是当月是第几周</span><br><span class="line">       to_char(sysdate,&#39;WW&#39;), --每年1月1日时第一周第一天开始算,当前时间是当年第几周</span><br><span class="line">       to_char(sysdate,&#39;IW&#39;)  --当前时间是当年第几周（自然周）</span><br><span class="line"> from dual;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>经验积累</category>
+      </categories>
       <tags>
         <tag>ORACLE</tag>
       </tags>
@@ -195,6 +198,9 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function fun()&#123;</span><br><span class="line">  echo &quot;这是一句非常牛逼的代码&quot;;</span><br><span class="line">&#125;</span><br><span class="line">fun();</span><br></pre></td></tr></table></figure>
 
 ]]></content>
+      <categories>
+        <category>经验积累</category>
+      </categories>
       <tags>
         <tag>MARKDOWN</tag>
       </tags>
