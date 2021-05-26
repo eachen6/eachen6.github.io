@@ -22,20 +22,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="给2020打个总结   健康度过2020    学习自己动手做了一个月菜    爬羊台山、梧桐山    给老爸换新车    给老妈买十字双开门大冰箱    学习购买基金进行投资    开了虾皮跨境店铺尝试开展副业">
+  <meta name="description" content="Netty介绍netty：异步的、基于事件驱动的网络应用框架，用以快速开发高性能、高可靠性的网络IO程序；本质是一个NIO框架 使用场景：网络通讯中间件&#x2F;框架（dubbo）、游戏、大数据 IO模型BIO（传统IO）：同步阻塞模型；适用于连接数较少且固定的架构，对服务器资源要求较高，并发局限于应用中，但程序简单易理解；客户端发起连接请求时服务端就需要启动一个线程进行处理，如果此线程不做任何事情，则会">
 <meta property="og:type" content="article">
-<meta property="og:title" content="给2020打个总结">
-<meta property="og:url" content="http://example.com/2021/01/04/2021-first-blog/index.html">
+<meta property="og:title" content="netty学习第一天">
+<meta property="og:url" content="http://example.com/2021/05/25/netty%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/index.html">
 <meta property="og:site_name" content="eachen&#39;s Blog">
-<meta property="og:description" content="给2020打个总结   健康度过2020    学习自己动手做了一个月菜    爬羊台山、梧桐山    给老爸换新车    给老妈买十字双开门大冰箱    学习购买基金进行投资    开了虾皮跨境店铺尝试开展副业">
+<meta property="og:description" content="Netty介绍netty：异步的、基于事件驱动的网络应用框架，用以快速开发高性能、高可靠性的网络IO程序；本质是一个NIO框架 使用场景：网络通讯中间件&#x2F;框架（dubbo）、游戏、大数据 IO模型BIO（传统IO）：同步阻塞模型；适用于连接数较少且固定的架构，对服务器资源要求较高，并发局限于应用中，但程序简单易理解；客户端发起连接请求时服务端就需要启动一个线程进行处理，如果此线程不做任何事情，则会">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-01-04T09:08:01.000Z">
-<meta property="article:modified_time" content="2021-01-05T00:15:53.843Z">
+<meta property="article:published_time" content="2021-05-25T11:17:56.000Z">
+<meta property="article:modified_time" content="2021-05-25T13:23:14.874Z">
 <meta property="article:author" content="eachen">
-<meta property="article:tag" content="年终总结">
+<meta property="article:tag" content="netty">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/01/04/2021-first-blog/">
+<link rel="canonical" href="http://example.com/2021/05/25/netty%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/">
 
 
 <script id="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>给2020打个总结 | eachen's Blog</title>
+  <title>netty学习第一天 | eachen's Blog</title>
   
 
 
@@ -198,7 +198,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/01/04/2021-first-blog/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/25/netty%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%80%E5%A4%A9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/shan.jpg">
@@ -211,7 +211,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          给2020打个总结
+          netty学习第一天
         </h1>
 
         <div class="post-meta">
@@ -220,23 +220,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-01-04 17:08:01" itemprop="dateCreated datePublished" datetime="2021-01-04T17:08:01+08:00">2021-01-04</time>
+              <time title="创建时间：2021-05-25 19:17:56 / 修改时间：21:23:14" itemprop="dateCreated datePublished" datetime="2021-05-25T19:17:56+08:00">2021-05-25</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-05 08:15:53" itemprop="dateModified" datetime="2021-01-05T08:15:53+08:00">2021-01-05</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%97%A5%E5%B8%B8/" itemprop="url" rel="index"><span itemprop="name">日常</span></a>
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
                 </span>
             </span>
 
@@ -258,22 +252,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="给2020打个总结"><a href="#给2020打个总结" class="headerlink" title="给2020打个总结"></a>给2020打个总结</h4><ul>
-<li><p><input checked="" disabled="" type="checkbox">  健康度过2020</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  学习自己动手做了一个月菜</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  爬羊台山、梧桐山</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  给老爸换新车</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  给老妈买十字双开门大冰箱</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  学习购买基金进行投资</p>
-</li>
-<li><p><input checked="" disabled="" type="checkbox">  开了虾皮跨境店铺尝试开展副业</p>
-</li>
-</ul>
+        <h2 id="Netty介绍"><a href="#Netty介绍" class="headerlink" title="Netty介绍"></a>Netty介绍</h2><p>netty：<strong>异步</strong>的、<strong>基于事件驱动</strong>的网络应用框架，用以快速开发高性能、高可靠性的网络IO程序；本质是一个NIO框架</p>
+<p>使用场景：网络通讯中间件/框架（dubbo）、游戏、大数据</p>
+<h2 id="IO模型"><a href="#IO模型" class="headerlink" title="IO模型"></a>IO模型</h2><p>BIO（传统IO）：同步阻塞模型；适用于连接数较少且固定的架构，对服务器资源要求较高，并发局限于应用中，但程序简单易理解；客户端发起连接请求时服务端就需要启动一个线程进行处理，如果此线程不做任何事情，则会造成不必要的线程开销（可以通过线程池机制改善）</p>
+<p>NIO：同步非阻塞模型；适用于连接数较多且连接比较短的架构，比如聊天服务器、弹幕系统、服务器间通信等，编程比较复杂；服务器实现模式为一个线程处理多个请求，即客户端请求注册到多路复用器上，多路复用器轮询，发现有IO请求的就进行处理</p>
+<p>AIO：异步非阻塞模型；</p>
+<h2 id="BIO-demo"><a href="#BIO-demo" class="headerlink" title="BIO demo"></a>BIO demo</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> mes.eachen;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.net.ServerSocket;</span><br><span class="line"><span class="keyword">import</span> java.net.Socket;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.ExecutorService;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.Executors;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BIOServer</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">//创建ServerSocket</span></span><br><span class="line">        ServerSocket serverSocket = <span class="keyword">new</span> ServerSocket(<span class="number">6666</span>);</span><br><span class="line">        <span class="comment">//创建线程池</span></span><br><span class="line">        ExecutorService executorService = Executors.newCachedThreadPool();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;线程&quot;</span>+Thread.currentThread().getName()+<span class="string">&quot;正在阻塞中，等待客户端请求&quot;</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//监听、等待socket连接</span></span><br><span class="line">            <span class="keyword">final</span> Socket socket = serverSocket.accept();</span><br><span class="line"></span><br><span class="line">            System.out.println(<span class="string">&quot;有一个客户端已连接进入&quot;</span>);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//创建一个线程，与之通讯</span></span><br><span class="line">            executorService.execute(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">                <span class="meta">@Override</span></span><br><span class="line">                <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                    <span class="comment">//具体通讯逻辑</span></span><br><span class="line">                    handler(socket);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">handler</span><span class="params">(Socket socket)</span></span>&#123;</span><br><span class="line">        <span class="keyword">byte</span>[] bytes = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//通过socket获取输入流</span></span><br><span class="line">            InputStream in = socket.getInputStream();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//循环读取客户端发来的数据</span></span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;线程&quot;</span>+Thread.currentThread().getName()+<span class="string">&quot;正在等待读取客户端信息&quot;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">int</span> len = in.read(bytes);</span><br><span class="line">                <span class="keyword">if</span>(len != -<span class="number">1</span>)&#123;</span><br><span class="line">                    <span class="comment">//输出客户端发送的信息</span></span><br><span class="line">                    System.out.println(<span class="keyword">new</span> String(bytes,<span class="number">0</span>,len));</span><br><span class="line">                &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;关闭和client的socket连接&quot;</span>);</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                socket.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -283,7 +268,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/" rel="tag"># 年终总结</a>
+              <a href="/tags/netty/" rel="tag"># netty</a>
           </div>
 
         
@@ -292,13 +277,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/12/16/ORACLE%E5%91%A8%E5%87%BD%E6%95%B0-0/" rel="prev" title="ORACLE周函数">
-      <i class="fa fa-chevron-left"></i> ORACLE周函数
+    <a href="/2021/02/25/%E4%B8%80%E4%B8%AA%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E7%9A%84%E6%8A%A5%E9%94%99/" rel="prev" title="一个莫名其妙的报错">
+      <i class="fa fa-chevron-left"></i> 一个莫名其妙的报错
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/01/27/java-Future%E6%A8%A1%E5%BC%8F/" rel="next" title="java Future模式">
-      java Future模式 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -357,7 +339,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%992020%E6%89%93%E4%B8%AA%E6%80%BB%E7%BB%93"><span class="nav-number">1.</span> <span class="nav-text">给2020打个总结</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Netty%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.</span> <span class="nav-text">Netty介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">IO模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BIO-demo"><span class="nav-number">3.</span> <span class="nav-text">BIO demo</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
