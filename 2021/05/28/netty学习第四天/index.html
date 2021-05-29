@@ -22,28 +22,33 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="eachen&#39;s Blog">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="selector选择器 selector能够检测多个注册的通道上是否有事件发生（注意：多个channel以时间的方式可以注册到同一个selector），如果有时间发生，便获取事件然后针对每个事件进行相应的处理。这样就可以只用一个单线程去管理多个通道，也就是管理多个连接和请求  只有在通道真正有读写事件发生的时候就会进行读写，大大减小系统开销  避免多线程之间的上下文切换导致的开销   select">
+<meta property="og:type" content="article">
+<meta property="og:title" content="netty学习第四天">
+<meta property="og:url" content="http://example.com/2021/05/28/netty%E5%AD%A6%E4%B9%A0%E7%AC%AC%E5%9B%9B%E5%A4%A9/index.html">
 <meta property="og:site_name" content="eachen&#39;s Blog">
+<meta property="og:description" content="selector选择器 selector能够检测多个注册的通道上是否有事件发生（注意：多个channel以时间的方式可以注册到同一个selector），如果有时间发生，便获取事件然后针对每个事件进行相应的处理。这样就可以只用一个单线程去管理多个通道，也就是管理多个连接和请求  只有在通道真正有读写事件发生的时候就会进行读写，大大减小系统开销  避免多线程之间的上下文切换导致的开销   select">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-05-28T11:35:10.000Z">
+<meta property="article:modified_time" content="2021-05-29T03:49:02.344Z">
 <meta property="article:author" content="eachen">
+<meta property="article:tag" content="netty">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2021/05/28/netty%E5%AD%A6%E4%B9%A0%E7%AC%AC%E5%9B%9B%E5%A4%A9/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>eachen's Blog</title>
+  <title>netty学习第四天 | eachen's Blog</title>
   
 
 
@@ -186,9 +191,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -204,10 +210,9 @@
       <meta itemprop="name" content="eachen's Blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/28/netty%E5%AD%A6%E4%B9%A0%E7%AC%AC%E5%9B%9B%E5%A4%A9/" class="post-title-link" itemprop="url">netty学习第四天</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          netty学习第四天
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -236,6 +241,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
 
         </div>
       </header>
@@ -246,7 +258,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="selector选择器"><a href="#selector选择器" class="headerlink" title="selector选择器"></a>selector选择器</h2><ul>
+        <h2 id="selector选择器"><a href="#selector选择器" class="headerlink" title="selector选择器"></a>selector选择器</h2><ul>
 <li><p>selector能够检测多个注册的通道上是否有事件发生（注意：多个channel以时间的方式可以注册到同一个selector），如果有时间发生，便获取事件然后针对每个事件进行相应的处理。这样就可以只用一个单线程去管理多个通道，也就是管理多个连接和请求</p>
 </li>
 <li><p>只有在通道真正有读写事件发生的时候就会进行读写，大大减小系统开销</p>
@@ -270,113 +282,34 @@
 
 <h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>四天了 总算对java I/O有一个大致的了解了，害</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/netty/" rel="tag"># netty</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/27/netty%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%89%E5%A4%A9/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/shan.jpg">
-      <meta itemprop="name" content="eachen">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="eachen's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/05/27/netty%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%89%E5%A4%A9/" class="post-title-link" itemprop="url">netty学习第三天</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-05-27 18:58:32" itemprop="dateCreated datePublished" datetime="2021-05-27T18:58:32+08:00">2021-05-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-28 19:44:21" itemprop="dateModified" datetime="2021-05-28T19:44:21+08:00">2021-05-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="FileChannel类"><a href="#FileChannel类" class="headerlink" title="FileChannel类"></a>FileChannel类</h2><p>FileChannel主要用来对本地文件进行IO操作，常用的方法有</p>
-<ol>
-<li>public int read(ByteBuffer dst)，从通道读取数据到缓冲区中</li>
-<li>public int write(ByteBuffer src)，把缓冲区的数据写到通道中</li>
-<li>public long transferFrom(ReadableByteChannel src, long position, long count)，从目标通道中复制数据到当前通道</li>
-<li>public long transferTo(long position, long count, WritableByteChannel target )，把数据从当前通道复制给目标通道</li>
-</ol>
-<h2 id="RandomAccessFile"><a href="#RandomAccessFile" class="headerlink" title="RandomAccessFile"></a>RandomAccessFile</h2><p>RandomAccessFile是java Io体系中功能最丰富的文件内容访问类。<br>即可以读取文件内容，也可以向文件中写入内容。<br>但是和其他输入/输入流不同的是，程序可以直接跳到文件的任意位置来读写数据。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/05/27/netty%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%89%E5%A4%A9/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/05/27/netty%E5%AD%A6%E4%B9%A0%E7%AC%AC%E4%B8%89%E5%A4%A9/" rel="prev" title="netty学习第三天">
+      <i class="fa fa-chevron-left"></i> netty学习第三天
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
   
-
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
 
 
 
@@ -428,6 +361,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#selector%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">selector选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#selector%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">selector相关方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E4%B8%AADemo"><span class="nav-number">3.</span> <span class="nav-text">写个Demo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="nav-number">4.</span> <span class="nav-text">写在最后</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
